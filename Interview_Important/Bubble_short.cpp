@@ -5,12 +5,17 @@ void Bubble(int a[],int s){
 
     int temp =0;
     for(int i=0;i<s;i++){
+        bool t=true;
         for(int j=0;j<s-i-1;j++){
             if(a[j]>a[j+1]){
                 temp =a[j+1];
                 a[j+1]=a[j];
                 a[j]=temp;
+                t=false;
             }
+        }
+        if(t){
+            break;
         }
     }
 
