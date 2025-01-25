@@ -7,6 +7,8 @@
 // Structure based
 
 
+
+// this is short first smaller number(important )
 #include<iostream>
 using namespace std;
 // int insert(int a[],int s){
