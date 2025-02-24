@@ -9,18 +9,18 @@ int dive (int a[],int low,int high){
             i++;
         }
         while(a[j]>pivot){
-            j++;
+            j--;
         }
-        int temp =a[i];
-        a[i]=a[j];
-        a[j]=temp;
+        if(i<j){
+            int temp =a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
     }while(i<j);
     int temp =a[low];
-        a[low]=a[high];
-        a[high]=temp;
-
-
-    return high;
+        a[low]=a[j];
+        a[j]=temp;
+    return j;
 
 }
 
@@ -35,12 +35,12 @@ void quickshort (int a[] ,int low,int high){
 }
 void display(int a[] ,int s){
     for(int i=0;i<s;i++){
-        cout<<a[i]<<"\t";
+        cout<<a[i]<<"\n";
     }
 }
  int main (){
-    int a[]={1,99,88,77,6,3,2,1,0,0,-9};
+    int a[]={1,99,88,77,6,3,1,0,0,2,0,-9};
     int s=sizeof(a)/sizeof(a[0]);
-    quickshort(a,0,s);
+    quickshort(a,0,s-1);
     display(a,s);
  }
