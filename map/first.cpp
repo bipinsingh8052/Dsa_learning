@@ -48,4 +48,17 @@ int main(){
 for(auto i=m2.begin();i!=m2.end();i++){
     cout<<i->first<<":"<<i->second<<"\n";
 }
+
+
+
+
+auto h =m2.find("a");
+cout<<h;
+m2.erase("a");
+// if(h){
+// cout<<";have account"<<"\n";
+// }
+// else{
+//     cout<<"Not have "
+// }
 }
