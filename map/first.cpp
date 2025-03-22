@@ -57,6 +57,7 @@ cout<<h;
 m2.erase("a");
 // if(h){
 // cout<<";have account"<<"\n";
+// cout<<h->first>>h->second;
 // }
 // else{
 //     cout<<"Not have "
